@@ -23,9 +23,8 @@ axios
       $('.layui-nav-img').attr('src', infoName.user_pic).show()
       $('.text-avatar-box').hide()
     } else {
-      // 显示文字头像 将名字的第一项变为大写
+      // 显示文字头像
       let first = name[0].toUpperCase()
-      $('.text-avatar-box').show().children().text(first)
-      $('.layui-nav-img').hide()
+      
     }
   })

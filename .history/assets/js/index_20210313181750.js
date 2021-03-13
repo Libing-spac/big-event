@@ -26,6 +26,6 @@ axios
       // 显示文字头像 将名字的第一项变为大写
       let first = name[0].toUpperCase()
       $('.text-avatar-box').show().children().text(first)
-      $('.layui-nav-img').hide()
+      
     }
   })

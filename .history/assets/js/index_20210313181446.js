@@ -22,10 +22,5 @@ axios
       // 将图片设置为获取到的数据的图片 将文字头像隐藏
       $('.layui-nav-img').attr('src', infoName.user_pic).show()
       $('.text-avatar-box').hide()
-    } else {
-      // 显示文字头像 将名字的第一项变为大写
-      let first = name[0].toUpperCase()
-      $('.text-avatar-box').show().children().text(first)
-      $('.layui-nav-img').hide()
-    }
+    }else
   })
