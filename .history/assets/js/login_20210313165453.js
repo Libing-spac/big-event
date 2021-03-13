@@ -68,7 +68,7 @@ $(function () {
           return layer.msg(res.data.message)
         }
         // 把服务器返回来的token信息 存储到本地存储中  localStorage
-        localStorage.setItem('token', res.data.token)
+        localStorage.Item('token', res.data.token)
 
         layer.msg('登录成功,马上跳转', function () {
           location.href = '/index.html'
