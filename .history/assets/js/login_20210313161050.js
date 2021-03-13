@@ -71,7 +71,7 @@ $(function () {
         localStorage.getItem('token', res.data.token)
 
         layer.msg('登录成功,马上跳转', function () {
-          location.href = '/index.html'
+          loaction
         })
       })
   })

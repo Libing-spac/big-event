@@ -42,7 +42,7 @@ $(function () {
     axios
       .post('http://ajax.frontend.itheima.net/api/reguser', data)
       .then((res) => {
-        // console.log(res)
+        console.log(res)
         if (res.data.status !== 0) {
           // 注册失败
           return layer.msg(res.data.message)
@@ -51,28 +51,6 @@ $(function () {
         layer.msg('注册成功，请登录')
         // 跳转登录页面
         $('#showLogin').click()
-      })
-  })
-  // ==========完成登录功能============
-  // 给登录框注册表单提交事件
-  $('.login-form').on('submit', function (e) {
-    // 阻止浏览器自动跳转行为
-    e.preventDefault()
-    // 获取表单数据
-    let data = $(this).serialize()
-    // 发送Ajax请求
-    axios
-      .post('http://ajax.frontend.itheima.net/api/login', data)
-      .then((res) => {
-        if (res.data.status !== 0) {
-          return layer.msg(res.data.message)
-        }
-        // 把服务器返回来的token信息 存储到本地存储中  localStorage
-        localStorage.getItem('token', res.data.token)
-
-        layer.msg('登录成功,马上跳转', function () {
-          location.href = '/index.html'
-        })
       })
   })
 })

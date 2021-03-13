@@ -58,21 +58,5 @@ $(function () {
   $('.login-form').on('submit', function (e) {
     // 阻止浏览器自动跳转行为
     e.preventDefault()
-    // 获取表单数据
-    let data = $(this).serialize()
-    // 发送Ajax请求
-    axios
-      .post('http://ajax.frontend.itheima.net/api/login', data)
-      .then((res) => {
-        if (res.data.status !== 0) {
-          return layer.msg(res.data.message)
-        }
-        // 把服务器返回来的token信息 存储到本地存储中  localStorage
-        localStorage.getItem('token', res.data.token)
-
-        layer.msg('登录成功,马上跳转', function () {
-          location.href = '/index.html'
-        })
-      })
   })
 })

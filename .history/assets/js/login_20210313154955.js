@@ -67,11 +67,10 @@ $(function () {
         if (res.data.status !== 0) {
           return layer.msg(res.data.message)
         }
-        // 把服务器返回来的token信息 存储到本地存储中  localStorage
+        // 把服务器返回来的token信息 存储到本地存储中  lo
         localStorage.getItem('token', res.data.token)
-
-        layer.msg('登录成功,马上跳转', function () {
-          location.href = '/index.html'
+        layer.msg('登录成功!马上跳转', function () {
+          location.href = 'index.html'
         })
       })
   })
