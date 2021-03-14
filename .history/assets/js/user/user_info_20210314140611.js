@@ -1,0 +1,10 @@
+$(function () {
+  let form = layui.from
+  // 发送Ajax请求 获取基本信息
+  axios.get('/my/userinfo').then((res) => {
+    console.log(res)
+    // 为表单赋值
+    form.val('user', res.data.data)
+    console.log(user)
+  })
+})

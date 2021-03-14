@@ -1,0 +1,8 @@
+$(function () {
+  let form = layui.form
+  // 发送Ajax请求 获取yong'hu
+  axios.get('/my/userinfo').then((res) => {
+    // console.log(res.data.data)
+    form.val('user', res.data.data)
+  })
+})
