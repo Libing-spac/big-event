@@ -5,12 +5,12 @@ $(function () {
   getCates()
   function getCates() {
     axios.get('/my/article/cates').then((res) => {
-      // if (res.data.status !== 0) {
-      //   return layer.msg(res.data.message)
-      // }
+      if (res.data.status !== 0) {
+        return layer.msg(res.data.message)
+      }
 
-      // // 获取成功
-      // layer.msg(res.data.message)
+      // 获取成功
+      layer.msg(res.data.message)
       // 将数展示到页面中
       $('tbody').empty()
       res.data.data.forEach((item) => {
