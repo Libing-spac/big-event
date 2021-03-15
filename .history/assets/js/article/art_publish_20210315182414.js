@@ -1,0 +1,3 @@
+$(function () {
+  // chu'hsi'hua
+})
